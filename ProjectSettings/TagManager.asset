@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Crear
   - nada
+  - Undefined
+  - objeto
   layers:
   - Default
   - TransparentFX
