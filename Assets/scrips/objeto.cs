@@ -6,4 +6,5 @@ public abstract class objeto : MonoBehaviour
 {
     public abstract void DobleTap();
     public abstract void Press(GameObject objeto);
+    public abstract void NoPress();
 }

@@ -27,4 +27,9 @@ public class Formas : objeto
         transform.parent = elPadre.transform;
     }
 
+    public override void NoPress()
+    {
+        transform.parent = null;
+    }
+
 }
