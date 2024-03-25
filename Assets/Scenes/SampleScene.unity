@@ -872,6 +872,8 @@ GameObject:
   m_Component:
   - component: {fileID: 833710771}
   - component: {fileID: 833710770}
+  - component: {fileID: 833710773}
+  - component: {fileID: 833710772}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -886,7 +888,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 833710769}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7156e548b8226274c9991f4171b8b2db, type: 3}
   m_Name: 
@@ -914,6 +916,66 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &833710772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833710769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e717bd0201f3264fa7cff503741aa37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ElColicionador: {fileID: 2118987487}
+  ElObjeto: {fileID: 3009834276816502990, guid: 25c17d33e40211c4fbcdd767018bfe80, type: 3}
+--- !u!114 &833710773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833710769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 932204f052ca0774cb645ba4f66b01f5, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 833710772}
+        m_TargetAssemblyTypeName: TouchInputSystem, Assembly-CSharp
+        m_MethodName: tapTouch
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 63821c6f-e335-41da-a679-07e528ae141c
+    m_ActionName: New action map/Tap[/Device Simulator Touchscreen/primaryTouch/tap]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: New action map
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &941654410
 GameObject:
   m_ObjectHideFlags: 0
@@ -1675,13 +1737,13 @@ GameObject:
   - component: {fileID: 1999913658}
   - component: {fileID: 1999913660}
   - component: {fileID: 1999913659}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ColiderPintar
   m_TagString: Crear
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1999913658
 Transform:
   m_ObjectHideFlags: 0
@@ -1691,8 +1753,8 @@ Transform:
   m_GameObject: {fileID: 1999913657}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.13, y: -3.07, z: 0}
-  m_LocalScale: {x: 16.8, y: 16.4, z: 1}
+  m_LocalPosition: {x: 0.13, y: -1.88, z: 0}
+  m_LocalScale: {x: 16.8, y: 18.44, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 343054264}
@@ -1937,8 +1999,8 @@ Canvas:
   m_GameObject: {fileID: 2080737108}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1998,7 +2060,7 @@ Transform:
   m_GameObject: {fileID: 2118987484}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 10.36, z: -10}
+  m_LocalPosition: {x: 0, y: 10.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2016,8 +2078,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a68000d2d250d1489edb15bdf9161cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanciaRaycast: {x: 0, y: 0.01}
-  ObjetoGuardado: {fileID: 0}
+  DireccionRaycast: {x: 0, y: 1}
+  distancia: 0.2
+  layerFondo:
+    serializedVersion: 2
+    m_Bits: 64
+  layerObjetos:
+    serializedVersion: 2
+    m_Bits: 128
+  ObjetoGuardadoFondo: {fileID: 0}
+  ObjetoGuardadoObjeto: {fileID: 0}
 --- !u!50 &2118987488
 Rigidbody2D:
   serializedVersion: 4

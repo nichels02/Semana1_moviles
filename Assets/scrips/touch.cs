@@ -26,6 +26,7 @@ public class touch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if ((eliminar || DobleTap || prees) && time < 0.3f) 
         {
             time += Time.deltaTime;
@@ -128,6 +129,7 @@ public class touch : MonoBehaviour
             OneTap = false;
             prees = false;
         }
+        */
         /*
         if (Input.touchCount == 0 && DobleTap && time < 0.5)  
         {
